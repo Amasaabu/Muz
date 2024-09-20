@@ -1,0 +1,13 @@
+.container {
+    width: 100vw;
+}
+.from {
+    display: flex;
+    flex-direction: column;
+}
+.form >div {
+    width: 20rem;
+}
+.form > div>label {
+    margin-right: 20px;
+}
