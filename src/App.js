@@ -4,11 +4,11 @@ import { useState } from 'react';
 function App() {
 
   const [formdata, setFormData]= useState({
-    privateKey: {value: '', error: '', name: 'PrivateKey'},
-    inputMint: {value: '', error: '', name: 'InputMint'},
-    outputMint: {value: '', error: '', name: 'Output'},
-    amount: {value: '', error: '', name: 'Amount'},
-    blockChain: {value: '', error: '', name: 'BlockChain'},
+    privateKey: {value: '', error: '', name: 'PrivateKey: '},
+    inputMint: {value: '', error: '', name: 'InputMint:'},
+    outputMint: {value: '', error: '', name: 'Output:'},
+    amount: {value: '', error: '', name: 'Amount:'},
+    blockChain: {value: '', error: '', name: 'BlockChain:'},
   })
 
   const Submit=(e)=>{
@@ -21,7 +21,7 @@ function App() {
   }
   const form = Object.keys(formdata).map((key)=>{
     return (
-      <div>
+      <div key={key}>
       <label htmlFor={formdata[key].name}>{formdata[key].name}</label>
       <input onChange={(e)=>{
         setFormData({
@@ -38,7 +38,7 @@ function App() {
     )
   }) 
   return (
-    <div className="container">
+    <div className={stlye.container}>
       <h1>Form</h1>
       <form className={stlye.form}>
         {form}
